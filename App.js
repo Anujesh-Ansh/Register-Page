@@ -45,7 +45,10 @@ export default function App() {
             onChangeText={text => setPRN(text)}
             keyboardType='number-pad'
           />
+          
           <Button title="Submit" onPress={onPressHandler} style={styles.button}/>
+
+
         </View>
         
         {submit ? (

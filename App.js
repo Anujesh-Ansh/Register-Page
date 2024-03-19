@@ -45,8 +45,9 @@ export default function App() {
             onChangeText={text => setPRN(text)}
             keyboardType='number-pad'
           />
-          
-          <Button title="Submit" onPress={onPressHandler} style={styles.button}/>
+          <View style={styles.button}>
+            <Button title="Submit" onPress={onPressHandler}/>
+          </View>
 
 
         </View>
@@ -72,7 +73,8 @@ const styles = StyleSheet.create({
   },
 
   button: {
-    width: 'auto',
+    width: 70,
+    alignSelf: 'center',
     opacity: 1,
   },
 

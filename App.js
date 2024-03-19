@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { ImageBackground, StyleSheet, Text, View, TextInput, Button, ToastAndroid, Alert, Image } from 'react-native';
+import { ImageBackground, StyleSheet, Text, View, TextInput, TouchableOpacity, ToastAndroid, Alert, Image } from 'react-native';
 
 export default function App() {
   const [name, setName] = useState('');
@@ -45,11 +45,9 @@ export default function App() {
             onChangeText={text => setPRN(text)}
             keyboardType='number-pad'
           />
-          <View style={styles.button}>
-            <Button title="Submit" onPress={onPressHandler}/>
-          </View>
-
-
+          <TouchableOpacity style={styles.button} onPress={onPressHandler}>
+            <Text style={styles.buttonText}>Submit</Text>
+          </TouchableOpacity>
         </View>
         
         {submit ? (
@@ -71,13 +69,18 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-
   button: {
-    width: 70,
+    backgroundColor: 'lightblue',
+    padding: 10,
+    borderRadius: 5,
     alignSelf: 'center',
-    opacity: 1,
+    marginBottom: 20,
   },
-
+  buttonText: {
+    fontSize: 16,
+    color: 'black',
+    textAlign: 'center',
+  },
   heading: {
     marginTop: 50,
     textAlign: 'center',
@@ -86,18 +89,15 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 20,
   },
-
   image: {
     flex: 1,
     resizeMode: 'cover',
   },
-
   label: {
     textAlign: 'left',
     paddingLeft: 10,
     color: 'black',
   },
-
   input: {
     height: 40,
     borderColor: 'gray',
@@ -106,16 +106,13 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     paddingHorizontal: 10,
   },
-
   yourName: {
     textAlign: 'center',
     marginTop: 20,
     fontSize: 18,
   },
-
   lowerDisplay: {
     paddingTop: 20,
     alignItems: 'center',
-  }
-
+  },
 });

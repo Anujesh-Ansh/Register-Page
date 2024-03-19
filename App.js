@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { ImageBackground, StyleSheet, Text, View, TextInput, TouchableOpacity, ToastAndroid, Alert, Image } from 'react-native';
+import { ImageBackground, StyleSheet, Text, View, TextInput, Pressable, ToastAndroid, Alert, Image } from 'react-native';
 
 export default function App() {
   const [name, setName] = useState('');
@@ -45,9 +45,9 @@ export default function App() {
             onChangeText={text => setPRN(text)}
             keyboardType='number-pad'
           />
-          <TouchableOpacity style={styles.button} onPress={onPressHandler}>
+          <Pressable style={styles.button} onPress={onPressHandler}>
             <Text style={styles.buttonText}>Submit</Text>
-          </TouchableOpacity>
+          </Pressable>
         </View>
         
         {submit ? (
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   button: {
-    backgroundColor: 'lightblue',
+    backgroundColor: '#FFCC00', // Mustard color
     padding: 10,
     borderRadius: 5,
     alignSelf: 'center',

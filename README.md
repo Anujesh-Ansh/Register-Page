@@ -1,6 +1,6 @@
 # Register Page
-### using React Native
-
+using React Native
+&br;
 ## Button Code (just using Button Tag)
 <img src="https://github.com/Anujesh-Ansh/Register-Page/assets/110138469/7d40a05f-1cf6-4bf1-952a-fe67dbb22417" width="200" height="400" />
 
